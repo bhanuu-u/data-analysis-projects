@@ -8,9 +8,9 @@ The project uses ball-by-ball IPL data to analyze team performance, toss decisio
 
 ## 🎯 Project Objective
 
-The goal of this project is to explore IPL 2025 data and answer meaningful cricket-related questions using data analysis and visualization.
+The goal of this project is to explore IPL 2025 data and answer meaningful cricket-related questions through data analysis and visualization.
 
-The project focuses on:
+The analysis focuses on:
 
 - Team performance
 - Toss decisions
@@ -36,11 +36,11 @@ The project focuses on:
 
 The project uses a ball-by-ball IPL dataset stored in:
 
-iplall.csv
+`iplall.csv`
 
 The dataset is loaded using Pandas and filtered to extract IPL 2025 data.
 
-The analysis uses information such as:
+Key information used includes:
 
 - Match ID
 - Season
@@ -62,11 +62,11 @@ The analysis uses information such as:
 
 The project calculates the number of matches won by each team during IPL 2025.
 
-A bar chart is used to visualize the results.
-
 ### Question
 
-Which teams had the most wins in IPL 2025?
+**Which teams had the most wins in IPL 2025?**
+
+![Team Wins](screenshots/team_wins.png)
 
 ---
 
@@ -79,38 +79,35 @@ Possible decisions include:
 - Bat
 - Field
 
-A bar chart is used to visualize the results.
-
 ### Question
 
-What did teams choose after winning the toss?
+**What did teams choose after winning the toss?**
+
+![Toss Decision](screenshots/toss_decision.png)
 
 ---
 
 ## 3. Does Winning the Toss Lead to Winning the Match?
 
-The project compares:
-
-- Toss Winner + Match Winner
-- Toss Winner + Match Loser
-
-A pie chart is used to visualize the results.
+The project compares whether the team winning the toss also went on to win the match.
 
 ### Question
 
-Does winning the toss lead to winning the match?
+**Does winning the toss lead to winning the match?**
+
+![Toss Impact](screenshots/toss_impact.png)
 
 ---
 
 ## 4. How Teams Won Their Matches
 
-The project analyzes the match result field to understand how teams won their matches.
-
-A bar chart is used to visualize the different winning methods.
+The project analyzes the match result to understand the different ways teams won their matches.
 
 ### Question
 
-How did teams win their matches?
+**How did teams win their matches?**
+
+![Winning Method](screenshots/winning_method.png)
 
 ---
 
@@ -118,13 +115,11 @@ How did teams win their matches?
 
 The project calculates total runs scored by each batter and identifies the top 10 run scorers of IPL 2025.
 
-A bar chart is used to visualize the results.
-
-Team-inspired colors are used to make the visualization easier to interpret.
-
 ### Question
 
-Who were the top run scorers of IPL 2025?
+**Who were the top run scorers of IPL 2025?**
+
+![Top Run Scorers](screenshots/top_run_scorers.png)
 
 ---
 
@@ -136,15 +131,15 @@ Player statistics are calculated using:
 - Total balls
 - Strike rate
 
-Strike Rate = (Runs / Balls) × 100
+**Strike Rate = (Runs / Balls) × 100**
 
 Only players with at least 100 runs are included to focus on meaningful batting contributions.
 
-A scatter plot is used to compare total runs with strike rate.
-
 ### Question
 
-How does a batter's scoring volume relate to their strike rate?
+**How does a batter's scoring volume relate to their strike rate?**
+
+![Runs vs Strike Rate](screenshots/runs_vs_strikerate.png)
 
 ---
 
@@ -156,7 +151,9 @@ A line graph is used to visualize how scoring changes throughout an innings.
 
 ### Question
 
-How does scoring change across the innings?
+**How does scoring change across the innings?**
+
+![Runs Across Overs](screenshots/runs_across_overs.png)
 
 ---
 
@@ -164,32 +161,32 @@ How does scoring change across the innings?
 
 The innings are divided into three phases:
 
-- Powerplay → Overs 1–6
-- Middle Overs → Overs 7–15
-- Death Overs → Overs 16–20
+- **Powerplay:** Overs 1–6
+- **Middle Overs:** Overs 7–15
+- **Death Overs:** Overs 16–20
 
 The project calculates the total runs scored during each phase.
 
-A bar chart is used to compare the three phases.
-
 ### Question
 
-Which phase of an innings produces the most runs?
+**Which phase of an innings produces the most runs?**
+
+![Innings Phase](screenshots/innings_phase.png)
 
 ---
 
-# 📈 Visualizations
+# 📈 Visualization Summary
 
-The project includes:
-
-- Team Wins Bar Chart
-- Toss Decision Bar Chart
-- Toss Impact Pie Chart
-- Winning Method Bar Chart
-- Top 10 Run Scorers Bar Chart
-- Runs vs Strike Rate Scatter Plot
-- Runs Across Overs Line Graph
-- Innings Phase Comparison Bar Chart
+| Analysis | Visualization |
+|---|---|
+| Team Wins | Bar Chart |
+| Toss Decisions | Bar Chart |
+| Toss Impact | Pie Chart |
+| Winning Methods | Bar Chart |
+| Top 10 Run Scorers | Bar Chart |
+| Runs vs Strike Rate | Scatter Plot |
+| Runs Across Overs | Line Graph |
+| Innings Phases | Bar Chart |
 
 ---
 
@@ -200,116 +197,43 @@ This project demonstrates practical use of:
 - Data loading with Pandas
 - Data filtering
 - Data cleaning
-- groupby()
-- value_counts()
-- agg()
-- sort_values()
-- head()
-- nunique()
+- `groupby()`
+- `value_counts()`
+- `agg()`
+- `sort_values()`
+- `head()`
+- `nunique()`
 - Conditional filtering
 - Creating derived columns
-- pd.cut()
+- `pd.cut()`
 - Data aggregation
-- Matplotlib
-- Seaborn
+
+### Visualization Techniques
+
 - Bar charts
 - Line charts
 - Pie charts
 - Scatter plots
-- Cricket performance analysis
+- Seaborn statistical visualizations
 
 ---
 
 # 📁 Project Structure
 
+```text
 ipl-2025-analysis/
 │
 ├── iplall.csv
 ├── ipl_2025_analysis.py
 │
 ├── screenshots/
+│   ├── innings_phase.png
+│   ├── runs_across_overs.png
+│   ├── runs_vs_strikerate.png
 │   ├── team_wins.png
+│   ├── top_run_scorers.png
 │   ├── toss_decision.png
 │   ├── toss_impact.png
-│   ├── top_run_scorers.png
-│   ├── runs_vs_strike_rate.png
-│   ├── runs_across_overs.png
-│   └── innings_phase.png
+│   └── winning_method.png
 │
 └── README.md
-
----
-
-# ▶️ How to Run
-
-## 1. Clone the Repository
-
-git clone <your-repository-url>
-
-## 2. Navigate to the Project
-
-cd ipl-2025-analysis
-
-## 3. Install Required Libraries
-
-pip install pandas matplotlib seaborn
-
-## 4. Run the Project
-
-python ipl_2025_analysis.py
-
-The program will load the IPL dataset, filter IPL 2025 data, perform the analysis, and generate the visualizations.
-
----
-
-# 📸 Visualizations
-
-Selected graphs from the project are included in the screenshots folder.
-
-These screenshots provide a quick overview of the analysis directly from the GitHub repository.
-
----
-
-# 🚀 Future Improvements
-
-Possible future improvements include:
-
-- Player-wise bowling analysis
-- Team batting comparisons
-- Team bowling comparisons
-- Venue-wise analysis
-- Powerplay strike-rate analysis
-- Death-over performance analysis
-- Partnership analysis
-- Player consistency analysis
-- Team performance trends
-- More advanced cricket analytics
-- SQL-based analysis
-- Interactive Power BI dashboard
-
----
-
-# 📚 Learning Outcomes
-
-This project helped me practice real-world data analysis using cricket data.
-
-Through this project, I learned how to:
-
-- Work with a ball-by-ball dataset
-- Filter data for a specific season
-- Aggregate match statistics
-- Calculate player statistics
-- Create meaningful cricket metrics
-- Ask analytical questions
-- Convert analytical results into visualizations
-- Use Pandas for data analysis
-- Use Matplotlib and Seaborn for visualization
-- Present data-driven results visually
-
----
-
-# 👨‍💻 Author
-
-**Revanth Bhanu**
-
-A cricket-focused data analysis project exploring IPL 2025 using Python, Pandas, Matplotlib, and Seaborn.
